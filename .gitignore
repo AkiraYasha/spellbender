@@ -1,0 +1,5 @@
+.vscode
+dist
+hackmud
+node_modules
+out

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "lib": ["ESNext", "dom"],
+    "types": ["@types/node"]
+  },
+  "include": ["**/*.nodejs.ts"]
+}

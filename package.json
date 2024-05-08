@@ -1,0 +1,18 @@
+{
+  "name": "spellbender",
+  "private": true,
+  "scripts": {
+    "build:wasm": "cd spellbender-wasm && make",
+    "push:wasm": "ts-node ./tools/split-wasm.ts",
+    "push:spellbender": "hsm push --mangle-names spellbender akira.spellbender",
+    "push:abi": "hsm push --mangle-names spellbender akira.abi",
+    "build:test": "tsup --entry.test test/index.ts --format cjs --legacy-output && ts-node ./tools/encode-script.ts ./dist/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "hackmud-script-manager": "0.20.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
+    "typescript": "5.4.5"
+  }
+}
