@@ -120,6 +120,9 @@ export const sandbox = `(function () {
   }
 
   const script = (name) => (...args) => bridge({ type: 'script', name, args })
+
+  globalThis.$script = (name, ...args) => bridge({ type: 'script', name, args })
+
   globalThis.$s = {
     accts: {
       balance_of_owner: script('accts.balance_of_owner'),

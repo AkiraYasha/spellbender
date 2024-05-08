@@ -170,12 +170,12 @@ export const createEngine = (opts: EngineOptions): JsEngine => {
 
       case 'scriptor': {
         const fn = scriptors[msg.name]
-        return fn.call(msg.args)
+        return fn.call(...msg.args)
       }
 
       case 'script': {
         const fn = get_import(msg.name)
-        return fn(msg.args)
+        return fn(...msg.args)
       }
 
       case 'db':
