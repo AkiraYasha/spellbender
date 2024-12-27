@@ -1,5 +1,14 @@
-export default () => {
+export default (ctx: Context) => {
+  const whitelist = ['akira']
+
+  if (!whitelist.includes(ctx.caller)) {
+    return { ok: false, msg: "Access Denied" }
+  }
+
   return {
+    // DEBUG
+    'debug': (value) => $D(value),
+
     // DATABASE
     'db.ObjectId': () => $db.ObjectId(),
     'db.i': (...args) => $db.i(...args),

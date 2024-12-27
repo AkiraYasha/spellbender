@@ -3,3 +3,5 @@ dist
 hackmud
 node_modules
 out
+
+spellbender/sandbox/bootstrap.ts

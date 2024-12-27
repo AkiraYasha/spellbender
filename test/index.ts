@@ -1,6 +1,9 @@
-export default (ctx, args) => {
+/*
+export default () => {
   return {
     ok: true,
-    msg: 'Hello, Mud!',
+    msg: "Hello, Mud!"
   }
-}
+}*/
+
+script.debug('test message')

@@ -1,4 +1,4 @@
-export const get_byte_length = (str: string): number => {
+export const getByteLength = (str: string): number => {
   let len = 0
 
   for (let i = 0; i < str.length; ++i) {
@@ -8,7 +8,7 @@ export const get_byte_length = (str: string): number => {
   return len
 }
 
-export const read_string = (ptr: number, buffer: Uint8Array): string => {
+export const readString = (ptr: number, buffer: Uint8Array): string => {
   let str = ''
   while (true) {
     let u0 = buffer[ptr++]
@@ -38,7 +38,7 @@ export const read_string = (ptr: number, buffer: Uint8Array): string => {
   }
 }
 
-export const write_string = (str: string, ptr: number, buffer: Uint8Array): void => {
+export const writeString = (str: string, ptr: number, buffer: Uint8Array): void => {
   var startIdx = ptr
   for (var i = 0; i < str.length; ++i) {
     var u = str.charCodeAt(i)

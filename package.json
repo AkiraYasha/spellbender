@@ -3,9 +3,13 @@
   "private": true,
   "scripts": {
     "build:wasm": "cd spellbender-wasm && make",
+    "build:bootstrap": "tsup --entry.bootstrap spellbender/sandbox/bootstrap/index.ts --format iife --legacy-output && ts-node ./tools/encode-bootstrap.ts",
+
     "push:wasm": "ts-node ./tools/split-wasm.ts",
     "push:spellbender": "hsm push --mangle-names spellbender akira.spellbender",
     "push:abi": "hsm push --mangle-names spellbender akira.abi",
+
+
     "build:test": "tsup --entry.test test/index.ts --format cjs --legacy-output && ts-node ./tools/encode-script.ts ./dist/test.js"
   },
   "devDependencies": {

@@ -8,7 +8,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "lib": ["ESNext", "dom"],
-    "types": ["@types/node"]
-  },
-  "include": ["**/*.nodejs.ts"]
+    "types": ["@types/node", "hackmud-script-manager/env"]
+  }
 }
